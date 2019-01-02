@@ -1,13 +1,20 @@
 import * as React from 'react';
 import Counter from '../../components/Counter/Counter';
-import { ICounterPageProps, ICounterPageState, IStoreCounter } from './CounterPage.d';
+import {
+  ICounterPageProps,
+  ICounterPageState,
+  IStoreCounter
+} from './CounterPage.d';
 import connectComponents from '../../decoraters/connectComponents';
 import * as selectors from '../../store/CountStore/selectors';
 import { Dispatch } from 'redux';
 import * as actions from '../../store/CountStore/actions';
-import { containerCounter } from './CounterPage.style';
+import { containerCounterStyle } from './CounterPage.style';
 
-class CounterPage extends React.PureComponent<ICounterPageProps, ICounterPageState> {
+class CounterPage extends React.PureComponent<
+  ICounterPageProps,
+  ICounterPageState
+> {
   constructor(props: ICounterPageProps) {
     super(props);
   }
@@ -33,11 +40,12 @@ class CounterPage extends React.PureComponent<ICounterPageProps, ICounterPageSta
 
   render() {
     return (
-      <div className={`${containerCounter}`}>
+      <div className={`${containerCounterStyle}`}>
         <Counter
           value={this.props.count}
           increment={this.incrementClick}
           decrement={this.decrementClick}
+          disabled={true}
         />
       </div>
     );

@@ -1,5 +1,5 @@
 import { css } from 'glamor';
 
-export const containerCounter = css({
+export const containerCounterStyle = css({
   textAlign: 'center'
 });
