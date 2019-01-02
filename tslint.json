@@ -1,0 +1,13 @@
+{
+  "extends": ["tslint-config-airbnb"],
+  "rules": {
+    "tslint-config-prettier": ["error"],
+    "trailing-comma": false,
+    "semicolon": false
+  },
+  "defaultSeverity": "warning",
+  "linterOptions": {
+    "emitWarnings": false,
+    "exclude": ["config/**/*.js", "node_modules/**/*.ts", "coverage/lcov-report/*.js"]
+  }
+}
