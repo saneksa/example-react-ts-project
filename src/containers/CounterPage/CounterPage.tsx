@@ -11,10 +11,7 @@ import { Dispatch } from 'redux';
 import * as actions from '../../store/CountStore/actions';
 import { containerCounterStyle } from './CounterPage.style';
 
-class CounterPage extends React.PureComponent<
-  ICounterPageProps,
-  ICounterPageState
-> {
+class CounterPage extends React.PureComponent<ICounterPageProps, ICounterPageState> {
   constructor(props: ICounterPageProps) {
     super(props);
   }

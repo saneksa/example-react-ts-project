@@ -14,6 +14,10 @@ class Counter extends React.PureComponent<ICounterProps, ICounterState> {
     super(props);
   }
 
+  static defaultProps = {
+    disabled: false
+  };
+
   render() {
     return (
       <React.Fragment>
