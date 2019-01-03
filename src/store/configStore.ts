@@ -14,7 +14,9 @@ const enhancerDev: StoreEnhancer = compose(
   devToolsEnhancer({})
 );
 
-const enhancerProd = compose(applyMiddleware(routerMiddleware(history), reduxPromise, reduxThunk));
+const enhancerProd = compose(
+  applyMiddleware(routerMiddleware(history), reduxPromise, reduxThunk)
+);
 
 export default function configStore() {
   const env = process.env.NODE_ENV;

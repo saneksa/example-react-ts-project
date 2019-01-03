@@ -1,4 +1,4 @@
-import react from 'react';
+import * as React from 'react';
 import enzyme, { mount, shallow } from 'enzyme';
 import enzymeAdapterReact16 from 'enzyme-adapter-react-16';
 import Counter from './Counter';
