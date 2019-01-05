@@ -1,5 +1,5 @@
-import { css } from 'glamor';
+import { style } from 'typestyle';
 
-export const containerCounterStyle = css({
+export const containerCounterStyle = style({
   textAlign: 'center'
 });

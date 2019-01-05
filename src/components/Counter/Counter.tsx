@@ -3,11 +3,10 @@ import { ICounterProps, ICounterState } from './Counter.d';
 import {
   containerStyle,
   buttonsStyle,
-  buttonsContainerStyle
+  buttonsContainerStyle,
+  inputStyle
 } from './Counter.style';
-import Input from '@material-ui/core/Input';
-import Button from '@material-ui/core/Button';
-import { Add, Remove } from '@material-ui/icons';
+import { Input, Button, Icon } from 'antd';
 
 class Counter extends React.PureComponent<ICounterProps, ICounterState> {
   constructor(props: ICounterProps) {
@@ -22,25 +21,21 @@ class Counter extends React.PureComponent<ICounterProps, ICounterState> {
     return (
       <React.Fragment>
         <div className={`${containerStyle}`}>
-          <Input value={this.props.value} disabled={this.props.disabled} />
+          <Input
+            value={this.props.value}
+            className={inputStyle}
+            disabled={this.props.disabled}
+          />
         </div>
         <div className={`${buttonsContainerStyle}`}>
           <div className={`${buttonsStyle}`}>
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={this.props.increment}
-            >
-              <Add />
+            <Button type="primary" onClick={this.props.increment}>
+              <Icon type="plus" />
             </Button>
           </div>
           <div className={`${buttonsStyle}`}>
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={this.props.decrement}
-            >
-              <Remove />
+            <Button type="primary" onClick={this.props.decrement}>
+              <Icon type="minus" />
             </Button>
           </div>
         </div>
